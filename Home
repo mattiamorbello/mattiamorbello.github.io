@@ -1,0 +1,119 @@
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+
+     <title> Mattia Morbello </title>
+     <meta name="description" content="Webpage of Mattia Morbello
+(he/him), PhD Student at University of Rennes. " />
+     <meta name="author" content="Mattia Morbello" />
+
+     <!-- Responsive -->
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+     <!-- Powered by w3.css-->
+     <link rel="stylesheet"
+href="https://www.w3schools.com/w3css/4/w3.css">
+
+     <!-- Colors -->
+     <link rel="stylesheet"
+href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+
+     <!-- Polices -->
+     <link rel="stylesheet"
+href="https://fonts.googleapis.com/css?family=Poppins">
+     <!-- Fontawesome-->
+     <script src="https://kit.fontawesome.com/4498386ec9.js"></script>
+     <!-- Favicon dans l'onglet -->
+     <link rel="shortcut icon" href="favicon.ico" />
+
+     <!-- Stile del sito -->
+     <link rel="stylesheet" type="text/css" href="pperso.css">
+</head>
+
+<body>
+
+     <!-- Sidebar/menu -->
+     <nav class="w3-sidebar w3-theme w3-collapse w3-top w3-large
+w3-padding" style="z-index:3;width:275px;font-weight:bold;"
+id="mySidebar"><br>
+         <a href="javascript:void(0)" onclick="w3_close()"
+class="w3-button w3-hide-large w3-display-topleft"
+style="width:100%;font-size:22px">Close Menu</a>
+         <div class="w3-container">
+             <h3 class="w3-padding-64 w3-xxlarge"><b>Mattia Morbello</b></h3>
+         </div>
+         <div class="w3-bar-block">
+             <a href="#home" onclick="w3_close()" class="w3-bar-item
+w3-button w3-hover-white">Home</a>
+             <a href="#research" onclick="w3_close()" class="w3-bar-item
+w3-button w3-hover-white">Research</a>
+             <a href="#teaching" onclick="w3_close()" class="w3-bar-item
+w3-button w3-hover-white">Teaching</a>
+                <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button
+w3-hover-white">Other</a>
+         </div>
+     </nav>
+
+     <!-- Top menu on small screens -->
+     <header class="w3-container w3-bottom w3-hide-large w3-theme
+w3-large w3-padding">
+         <a href="javascript:void(0)" class="w3-button w3-theme
+w3-margin-right" onclick="w3_open()">☰</a>
+         <span>Mattia Morbello</span>
+     </header>
+
+     <!-- Overlay effect when opening sidebar on small screens -->
+     <div class="w3-overlay w3-hide-large" onclick="w3_close()"
+style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+     <!-- DA QUI COMINCIA LA PAGINA -->
+     <div class="w3-main" style="margin-left:320px;margin-right:40px">
+
+
+     <!-- Presentazione -->
+         <div class="w3-container" id="home">
+             <div class="w3-bar ">
+                <img
+                  src="foto.jpg"
+            alt="picture" class="w3-bar-item"
+style="float:left;width:450px;border:0;">
+                 <div class="w3-bar-item">
+             <p>
+                 I am a PhD student under the supervision of <a  class="w3-text-theme"
+href="https://perso.univ-rennes1.fr/frank.loray/">Frank Loray</a>, at Rennes University, since September 2022.  <br/><br/>
+               My research project is to understand the geometry of the Painlevé equations, in particular I am currently studying the behaviour of the foliation induced by the Riemann-Hilbert map on the boundary of the compactified moduli space of Painlevé V connections. <br/><br/>
+               Here is my CV (updated december 2024)
+
+       
+             </p>
+         </div>
+     
+
+
+<!-- Contact -->
+         <div class="w3-container" style="margin-top:30px" id="contact">
+             <h1 class="w3-xlarge w3-text-theme"><b>Contact</b></h1>
+             <hr />
+           <p><strong>Email:</strong> <i class="w3-text-theme"
+ >mattia.morbello [at] univ-rennes.fr </i> </p>
+             <hr />
+             <p><strong>Address:</strong>
+       IRMAR</br>
+        Building 22-23, office 621</br>
+        Campus Beaulieu</br>
+        Université de Rennes</br>
+        35000 Rennes, France</br>
+
+         </div>
+
+  </script>
+
+</body>
