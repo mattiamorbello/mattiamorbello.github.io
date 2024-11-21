@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<head>
+     <meta charset="UTF-8">
+
+     <title> Mattia Morbello </title>
+     <meta name="description" content="Webpage of Mattia Morbello
+(he/him), PhD Student at University of Rennes. " />
+     <meta name="author" content="Mattia Morbello" />
+
+     <!-- Responsive -->
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+     <!-- Powered by w3.css-->
+     <link rel="stylesheet"
+href="https://www.w3schools.com/w3css/4/w3.css">
+
+     <!-- Colors -->
+     <link rel="stylesheet"
+href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+
+     <!-- Polices -->
+     <link rel="stylesheet"
+href="https://fonts.googleapis.com/css?family=Poppins">
+     <!-- Fontawesome-->
+     <script src="https://kit.fontawesome.com/4498386ec9.js"></script>
+     <!-- Favicon dans l'onglet -->
+     <link rel="shortcut icon" href="favicon.ico" />
+
+     <!-- Stile del sito -->
+     <link rel="stylesheet" type="text/css" href="pperso.css">
+
+ <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #607d8b;
+  color: white;
+}
+</style>
+     
+</head>
+
+<body>
+
+
+<!-- Topbar/menu -->
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="community.html">Community</a>
+  <a href="other.html">Other</a>
+</div>
+     
+     <!-- Sidebar/menu -->
+     <nav class="w3-sidebar w3-theme w3-collapse w3-top w3-large
+w3-padding" style="z-index:3;width:275px;font-weight:bold;"
+id="mySidebar"><br>
+         <a href="javascript:void(0)" onclick="w3_close()"
+class="w3-button w3-hide-large w3-display-topleft"
+style="width:100%;font-size:22px">Close Menu</a>
+         <div class="w3-container">
+             <h3 class="w3-padding-64 w3-xxlarge"><b>Mattia Morbello</b></h3>
+         </div>
+         <div class="w3-bar-block">
+             <a href="index.html" onclick="w3_close()" class="w3-bar-item
+w3-button w3-hover-white">Home</a>
+             <a href="research.html" onclick="w3_close()" class="w3-bar-item
+w3-button w3-hover-white">Research</a>
+             <a href="teaching.html" onclick="w3_close()" class="w3-bar-item
+w3-button w3-hover-white">Teaching</a>
+             <a href="community.html" onclick="w3_close()" class="w3-bar-item
+w3-button w3-hover-white">Community</a>
+                <a href="other.html" onclick="w3_close()" class="w3-bar-item 
+w3-button w3-hover-white">Other</a>
+               
+         </div>
+     </nav>
+
+    
+
+     <!-- DA QUI COMINCIA LA PAGINA -->
+     <div class="w3-main" style="margin-left:320px;margin-right:40px">
+     
+ 
+ 
+ 
+<!-- Organisation -->
+         <div class="w3-container" id="teaching" style="margin-top:30px">
+             <h1 class="w3-xlarge w3-text-theme "><b>Organisation</b></h1>
+             
+             <hr />
+   <p> October 2024 : <strong><a
+href="https://irmar.univ-rennes.fr/journees-des-doctorants-et-doctorantes">Journées des Doctorant·e·s</a></strong>, IRMAR, Universitè de Rennes. <br/>
+                </p>
+             
+             <hr />
+   <p> 2024-2025 : <strong><a
+href="https://irmar.univ-rennes.fr/seminaires-des-doctorants">PhD seminar - Pampers</a></strong>, IRMAR, Universitè de Rennes. <br/>
+                </p>
+             
+             <hr />
+   <p> May 2024 : <strong><a
+href="https://irmar.univ-rennes.fr/journees-des-doctorants-et-doctorantes">Journées des Doctorant·e·s</a></strong>, IRMAR, Universitè de Rennes. <br/>
+                </p>
+             
+             <hr />
+   <p> Mars 2024 : <strong><a
+href="https://agenda.univ-rennes.fr/events/egalite-et-sciences-la-place-des-femmes-edition-2024">Égalité et sciences: la place des femmes</a></strong>, Universitè de Rennes. <br/>
+                </p>
+             
+             <hr />
+   <p> December 2023 : <strong><a
+href="https://sites.google.com/view/welcomehome2023/home-page">Welcome Home</a></strong>, Università di Torino. <br/>
+                </p>
+    
+ 
+
+<!-- Responsibilities -->
+         <div class="w3-container" id="teaching" style="margin-top:30px">
+             <h1 class="w3-xlarge w3-text-theme "><b>Responsibilities</b></h1>
+             
+             <hr />
+   <p> <strong>2023-2024</strong> : <i>Member of Parity Commission</i>, IRMAR, Université de Rennes.
+               </p>
+    
+    <hr />
+   <p> <strong>2017-2021</strong> : <i>Student representative</i>, Math Departement, Università di Torino.
+               </p>
+
+
+
+
+
+
+</body>
