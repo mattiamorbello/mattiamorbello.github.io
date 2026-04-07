@@ -1,0 +1,800 @@
+\documentclass[10pt,xcolor=svgnames]{beamer} %Beamer
+\usepackage[justify]{ragged2e}
+\usepackage{etoolbox}
+\usepackage{lipsum}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{amsfonts}
+\usepackage{bbm}
+\usepackage{caption}
+%\usepackage{eufrak}
+\usepackage{gensymb}
+\usepackage{tikz-cd}
+\usepackage{mathdots}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+\newcommand{\setm}{\smallsetminus}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathbb{H}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\HP}{\mathbb{HP}}
+%\newcommand{\G}{\mathbb{G}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\DR}{\mathcal{DR}}
+
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\rad}[1]{\sqrt{#1}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\Qmatrix}[4]{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
+\newcommand{\qmatrix}[4]{\left(\begin{smallmatrix}#1&#2\\#3&#4\end{smallmatrix}\right)}
+
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\h}{\mathfrak{h}}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it} % k
+\renewcommand{\k}{\mathpzc{k}}
+\newcommand{\q}{\mathfrak{q}}
+%\renewcommand{\c}{\mathfrak{c}}
+\newcommand{\gl}{\mathfrak{gl}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\so}{\mathfrak{so}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\su}{\mathfrak{su}}
+\renewcommand{\sp}{\mathfrak{sp}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\aff}{\mathfrak{aff}}
+\usepackage{mathrsfs}
+\newcommand{\F}{\mathscr{F}}
+\newcommand{\X}{\mathfrak{X}}
+\renewcommand{\L}{\mathscr{L}}
+\renewcommand{\O}{\mathscr{O}}
+\newcommand{\M}{\mathcal{M}}
+
+\newcommand{\1}{\mathbbm{1}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\z}{\mathfrak{z}}
+\DeclareMathOperator{\dd}{d}
+\DeclareMathOperator{\dx}{dx}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\aut}{aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\sym}{Sym}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\der}{der}
+\DeclareMathOperator{\Mor}{Mor}
+\DeclareMathOperator{\Map}{Map}
+\DeclareMathOperator{\Ob}{Ob}
+\DeclareMathOperator{\Hom}{Hom}
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+%\usepackage{quiver}
+\usepackage{palatino, dsfont} %font type
+\usefonttheme{metropolis} %Type of slides
+\usefonttheme[onlymath]{serif} %font type Mathematical expressions
+\usetheme[progressbar=frametitle,titleformat frame=smallcaps,numbering=counter]{metropolis} %This adds a bar at the beginning of each section.
+\useoutertheme[subsection=false]{miniframes} %Circles in the top of each frame, showing the slide of each section you are at
+
+\usepackage{appendixnumberbeamer} %enumerate each slide without counting the appendix
+\setbeamercolor{progress bar}{fg=Maroon!70!Coral} %These are the colours of the progress bar. Notice that the names used are the svgnames
+\setbeamercolor{title separator}{fg=DarkSalmon} %This is the line colour in the title slide
+\setbeamercolor{structure}{fg=black} %Colour of the text of structure, numbers, items, blah. Not the big text.
+\setbeamercolor{normal text}{fg=black!87} %Colour of normal text
+\setbeamercolor{alerted text}{fg=DarkRed!60!Gainsboro} %Color of the alert box
+\setbeamercolor{example text}{fg=Maroon!70!Coral} %Colour of the Example block text
+
+
+\usepackage{media9}%
+\newcommand{\includemovie}[3]{%
+	\includemedia[%
+	width=#1,height=#2,%
+	activate=pagevisible,%
+	deactivate=pageclose,%
+	addresource=#3,%
+	flashvars={%
+		src=#3 % same path as in addresource!
+		&autoPlay=true % default: false; if =true, automatically starts playback after activation (see option ‘activation)’
+		&loop=true % if loop=true, media is played in a loop
+		&controlBarAutoHideTimeout=0 %  time span before auto-hide
+	}%
+	]{}{StrobeMediaPlayback.swf}%
+}% end of the new command
+
+
+
+\setbeamercolor{palette primary}{bg=NavyBlue!50!DarkOliveGreen, fg=white} %These are the colours of the background. Being this the main combination and so one. 
+\setbeamercolor{palette secondary}{bg=NavyBlue!50!DarkOliveGreen, fg=white}
+\setbeamercolor{palette tertiary}{bg=NavyBlue!40!Black, fg= white}
+\setbeamercolor{section in toc}{fg=NavyBlue!40!Black} %Color of the text in the table of contents (toc)
+
+%These next packages are the useful for Physics in general, you can add the extras here. 
+\usepackage{amsmath,amssymb}
+\usepackage{slashed}
+\usepackage{cite}
+\usepackage{relsize}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage{geometry}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{bluetemp}\xspace}}%metropolis}}\xspace}
+
+\title{Compactification of the fifth Painlevé Foliation}
+\author[Name]{Mattia Morbello} %With inst, you can change the institution they belong
+\subtitle{Web-seminar on Painlevé Equations and related topics}
+\institute[uni]{Université de Rennes}
+\date{8 April 2026} %Here you can change the date %You can modify the location of the logo by changing the command \vspace{}. 
+
+
+
+
+\begin{document}
+{
+\setbeamercolor{background canvas}{bg=NavyBlue!50!DarkOliveGreen, fg=white}
+\setbeamercolor{normal text}{fg=white}
+\maketitle
+%\includegraphics[width=3cm]{LOGO.jpg}
+}%This is the colour of the first slide. bg= background and fg=foreground
+
+
+
+
+
+
+
+\section{Meromorphic Connections}
+
+
+\begin{frame}{Meromorphic Connections on $\P^1$}
+\metroset{block=fill}
+\begin{exampleblock}{Definition}
+A rank 2 meromorphic connection $(E, D, \nabla)$ on $\P^1$ is the data of:
+\begin{itemize}
+	\item a rank 2 holomorphic vector bundle $E\to \P^1$,
+	\item a effective divisor $D$ of $\P^1$ called the polar divisor,
+	\item a morphism $\nabla\colon\mathcal E\to \mathcal E\otimes \Omega^1(D)$.
+\end{itemize}
+\end{exampleblock}
+\begin{exampleblock}{Remark}
+	The sheaf $\Omega^1(D):=\Omega^1\otimes \O(D)$ is the sheaf of meromorphic 1-forms with poles as prescribed by $D$.
+\end{exampleblock}
+\begin{exampleblock}{Leibniz Rule}
+The operator $\nabla$ is required to satisfy
+\[\nabla(f\sigma)=df\cdot\sigma+f\nabla\sigma\]
+\end{exampleblock}
+\end{frame}
+
+
+
+%\begin{frame}{An Example}
+%\metroset{block=fill}
+%\begin{exampleblock}{Euler System: $X=\P^1$ and $\deg D=2$}
+%$(\nabla, E, D)=(d+\Omega,\; \O\oplus\O,\; [0]+[\infty])$.
+%\[d\begin{pmatrix}y_1\\y_2\end{pmatrix}+\Omega\begin{pmatrix}y_1\\y_2\end{pmatrix}\;\;\;=\;\;\;\begin{pmatrix}dy_1\\dy_2\end{pmatrix}+\Bigg[\underbrace{\begin{pmatrix}a&b\\c&d\end{pmatrix}\frac{dx}{x}}_{\Omega}\Bigg]\begin{pmatrix}y_1\\y_2\end{pmatrix}\]
+%\begin{itemize}
+%	\item Has simple poles in $x=0$ and $x=\infty$.
+%	\item Has a solution matrix of the form \[Y(x)=x^{A}:=\exp\Big(A\log x\Big)\]
+%	\item Has non-trivial \textit{monodromy} due to the complex logarithm.
+	%\item It is a \textit{normal form}.
+%	\item Any deformation of parameters modify the monodromy (rigidity).
+%\end{itemize}
+%\end{exampleblock}
+%\end{frame}
+
+
+%\begin{frame}{An example}
+%	\metroset{block=fill}
+%	\begin{exampleblock}{Meromorphic connections on the trivial bundle}
+%		Let $E\cong\O\oplus\O$ be the trivial bundle. Any $(E, D, \nabla)$ is of the form 
+%		\[\nabla=d+\Omega, \;\;\;\text{ for }\;\;\;\Omega\in \mathfrak{gl}_2\left(\Omega^1(D)\right).\]
+%		The action on a global section is then the following:
+%		\[\nabla Y=\nabla\begin{pmatrix}y_1\\y_2\end{pmatrix}=\begin{pmatrix}dy_1\\dy_2\end{pmatrix}+\begin{pmatrix}\omega_{1,1}&\omega_{1,2}\\\omega_{2,1}&\omega_{2,2}\end{pmatrix}\begin{pmatrix}y_1\\y_2\end{pmatrix}\]
+%		for some $\omega_{i,j}\in \Omega^1(D)$
+%	\end{exampleblock}
+%\end{frame}
+
+
+%\begin{frame}{What if $E$ is not trivial ?}
+%\metroset{block=fill}
+%\begin{exampleblock}{Remark (Birkhoff-Grothendieck Theorem)}
+%	Any rank 2 vector bundle $E$ on $\P^1$ is of the form 
+%	\[E\cong\O(k_1)\oplus\O(k_2), \;\;\;\text{ for }\;\;\;k_1,k_2\in \Z.\]
+%\end{exampleblock}
+%\vskip 15pt
+%\begin{exampleblock}{Remark}
+%	The cover $\{U_0,U_\infty\}$ trivialize any vector bundle $E$ on $\P^1$. 
+%\end{exampleblock}
+%\end{frame}
+
+
+
+
+\begin{frame}{Local Expression}
+	\metroset{block=fill}
+	\begin{exampleblock}{Trivialisation}
+		On a trivializing open set $U$, a connection $(E,D,\nabla)$ has the form
+		\[\nabla_{|U}=d+\Omega_U, \;\;\text{ for }\;\;\Omega_U\in \mathfrak{gl}_2(\Omega^1(D\cap U)).\]
+	\end{exampleblock}
+	\begin{exampleblock}{Gluing conditions}
+		Any connection $(E, D, \nabla)$ on $\P^1$ is then identified with the data
+		\[\begin{cases*}d+\Omega_0 \;\;\text{ on }U_0:=\P^1\setminus\{\infty\}\\d+\Omega_\infty \;\text{ on }U_\infty:=\P^1\setminus\{0\}\\g_{0,\infty}\;\;\;\;\;\;\text{ cocycle of } E\end{cases*}\]
+		with gluing condition on the overlap
+		\[\Omega_0=g_{0,\infty}^{-1}\cdot \Omega_\infty\cdot g_{0,\infty}+ g_{0,\infty}^{-1}\cdot dg_{0,\infty}.\]
+	\end{exampleblock}
+\end{frame}
+
+
+
+
+
+%\begin{frame}{Local Monodromy}
+%	\begin{exampleblock}{Horizontal sections}
+%		A local section $Y$ is said horizontal if $\nabla_{|U} Y=dY+\Omega_UY=0$
+%	\end{exampleblock}
+%	\begin{exampleblock}{Monodromy}
+%	\begin{center}
+%	\end{center}
+%	\[Y^\gamma=M_\gamma\cdot Y\;\;\text{ for }\;\;M_\gamma\in \mathrm{GL}_2(\C).\]
+%	\end{exampleblock}
+%\end{frame}
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{Equivalence of Connections}
+\metroset{block=fill}
+\begin{exampleblock}{Gauge equivalence of connections}
+We say that $(E, D, \nabla)\sim(E',D',\nabla')$ if there exists $\Phi\in\mathrm{Mor}(E, E')$ such that 
+\[\Phi^*\nabla'=\nabla.\]
+\end{exampleblock}
+\begin{exampleblock}{Fact}
+	\[(E, D, \nabla)\sim(E',D',\nabla')\;\;\;\implies\;\;\;M_\nabla\sim M_{\nabla'}\]
+\end{exampleblock}
+\begin{exampleblock}{Local equivalence}
+The connections matrices on a trivialising open set $U$ are locally related by: 
+\[\Omega_U=\Phi^{-1}\Omega_U'\Phi+\Phi^{-1}d\Phi\]
+\end{exampleblock}
+\end{frame}
+
+
+
+\begin{frame}{Equivalence of Connections}
+	\metroset{block=fill}
+	\begin{exampleblock}{Example}
+	The action of the meromorphic gauge transformation
+	\[\Phi(x)=\begin{pmatrix}1&0\\0&\frac{1}{x-q}\end{pmatrix}\]
+	on the connection $(\O\oplus\O, D, d+\Omega)$ is
+	\[(\O\oplus\O(1), D+[q], d+\Omega'),\]
+	where
+	\[\Omega':=\begin{pmatrix}\omega_{1,1}&(x-q)\omega_{1,2}\\\frac{1}{x-q}\omega_{2,1}&\omega_{2,2}-\frac{dx}{x-q} \end{pmatrix}\]
+	\end{exampleblock}
+\end{frame}
+
+
+
+%\begin{frame}{Meromorphic Gauge Transformations}
+%\metroset{block=fill}
+%\begin{exampleblock}{Remark}
+%Meromorphic gauge transformations do not change the monodromy and changes the degree of the bundle.
+%\end{exampleblock}
+%\vfill
+%\begin{exampleblock}{Example}
+%\[\Psi:=\begin{pmatrix}1&0\\0&\frac{1}{x-q}\end{pmatrix}\]
+%is a meromorphic gauge transformation, then:
+%\[\Psi\;\colon\; (\nabla, \O\oplus\O, D) \mapsto (\tilde\nabla, \O\oplus\O(1), D+[q]),\]
+%and the pole $q$ has trivial monodromy.
+%\end{exampleblock}
+%\begin{exampleblock}{Conclusion}
+%Since we are interested in isomonodromic deformations, we have to study connections up to meromorphic gauge transformations.
+%\end{exampleblock}
+%\end{frame}
+
+
+
+
+\section{Painlevé V Connections}
+
+
+
+
+
+%\begin{frame}{Painlevé Equations}
+%\metroset{block=fill}
+%\begin{exampleblock}{Isomonodromic Deformations}
+%If $\deg D \geq 4$, we can deform $[\nabla]$ keeping the (conjugacy class of the) monodromy constant.
+%\end{exampleblock}
+%\vfill
+%set image of coalescent diagram ?
+%\begin{exampleblock}{Painlevé Equations (Jimbo, Miwa, Ueno 1981)}
+%Are second order differential equations whose solutions parametrise isomonodromic deformations of rank 2 meromorphic connections with $\deg D = 4$.
+%\end{exampleblock}
+%\end{frame}
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{Connexions du type PV}
+	\metroset{block=fill}
+	\begin{exampleblock}{Definition}
+		Meromorphic connections $(E, D, \nabla)$ such that
+		\[D^{\text{min}}=[0]+2[1]+[\infty],\]
+		where $D^{\text{min}}$ is the \textit{minimal} polar divisor w.r.t. the gauge equivalence class of  $(E, D, \nabla)$.
+	\end{exampleblock}
+	\vfill
+	\begin{exampleblock}{Consequence}
+		In $D^{\text{min}}$ only appear poles
+		\begin{itemize}
+			\item that cannot be eliminated nor reduced via a gauge transformation,
+			\item with minimal Poincaré rank,
+			\item with non-trivial monodromy.
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{Normal Form}
+\metroset{block=fill}
+\begin{exampleblock}{Normal Form on $\O\oplus\O(2)$ (Diarra, Loray 2019)}
+\begin{align*}
+	\nabla_{|0}= & \,d+\Omega_0=\\\\&d+\begin{pmatrix}0&1\\0&t\end{pmatrix}\frac{dx}{(x-1)^2}+\begin{pmatrix}0&-1\\0&\kappa_1\end{pmatrix}\frac{dx}{x-1}+\begin{pmatrix}0&1\\0&-\kappa_0\end{pmatrix}\frac{dx}{x}\\\\&+\begin{pmatrix}0&0\\\kappa_\infty&0\end{pmatrix}xdx+\begin{pmatrix}0&0\\p&-1\end{pmatrix}\frac{dx}{x-q}+\begin{pmatrix}0&0\\\hat K&0\end{pmatrix}dx,
+\end{align*}
+\end{exampleblock}
+\begin{exampleblock}{Fixed Parameters}
+\[\Theta:=\{\kappa_0, \kappa_1, \kappa_\infty\}\subseteq \C\]
+\end{exampleblock}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Geometrical Interpretation of $t$ and $q$}
+	\metroset{block=fill}
+	\begin{exampleblock}{Action of $f\in\mathrm{Aut}(\P^1)$}
+		Let $f\in\mathrm{Aut}(\P^1)$, then:
+		\begin{itemize}
+			\item $q\mapsto f(q)$,
+			\item $t\mapsto Df(1)\cdot t$.
+		\end{itemize}
+	\end{exampleblock}
+	\begin{center}
+		\includegraphics[width=5cm]{ratirr.jpeg}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}{Rational Irregular Curves}
+	\metroset{block=fill}
+	\begin{exampleblock}{Definition}
+		A rational irregular curve is $(\P^1, D, J)$, where 
+		\begin{itemize}
+			\item $D=\sum_{i\in I} n_i[p_i]$ is an effective divisor,
+			\item $J=\{j^{n_i-1}(p_i)\}_{i\in I}$ is a collection of jets.
+		\end{itemize}
+	\end{exampleblock}
+	\begin{exampleblock}{Example}
+		$(\P^1, D, J)$ with 
+		\begin{itemize}
+			\item $D=[0]+2[1]+[\infty]+[q]$
+			\item $J=\{\;j^0(0),\; j^1(1)=(1,t),\; j^0(\infty),\; j^0(q)\;\}$.
+		\end{itemize}
+	\end{exampleblock}
+	\begin{exampleblock}{Proposition}
+		$[(\nabla, E, D)]$ "generic" of PV type $\iff$ a rational irregular curve and $p\in\C$.
+	\end{exampleblock}
+\end{frame}
+
+
+
+
+%\begin{frame}{Geometrical Interpretation of $p$}
+%\metroset{block=fill}
+%\begin{exampleblock}{Projectivisation of the Connection}
+%Given a Painlevé V connection $(\nabla, \O\oplus\O(2))$, we can consider
+%\begin{itemize}
+%	\item $\P(E)$, that is a $\P^1$-bundle with fiber coordinate $y:=y_2/y_1$
+%	\item The Riccati differential equation \[dy=-\omega_{1,2}y^2+\omega_{2,2}y+\omega_{2,1}\] induced by $\nabla$.
+%\end{itemize}
+%\end{exampleblock}
+%\begin{exampleblock}{Riccati Foliation}
+%\begin{itemize}
+%	\item $\mathbb{F}_2:=\P(\O\oplus\O(2))$ the second Hirzebruch surface
+%	\item $\mathcal F$ the foliation on $\mathbb{F}_2$ induced by the differential equation below.
+%\end{itemize}
+%\end{exampleblock}
+%\end{frame}
+
+
+
+
+
+
+
+%\begin{frame}{Geometrical Interpretation of $p$}
+%\metroset{block=fill}
+%\begin{center}
+%    \includegraphics[width=11cm]{DISEGNI(16).jpeg}
+%\end{center}
+%\end{frame}
+
+
+
+%\begin{frame}{Monodromy}
+%\metroset{block=fill}
+%\begin{exampleblock}{Fact}
+%\[\mathrm{Mon}(\nabla, \O\oplus\O(2))=\mathrm{Mon}(\mathcal{F}, \mathbb{F}_2)\]
+%\end{exampleblock}
+%\vfill
+%\begin{exampleblock}{Stokes Phenomena}
+%The local monodromy around $x=1$ is more complicated: solutions are defined only on sectors around the singularity and the change of sector give rise to a monodromy.
+%\end{exampleblock}
+%\end{frame}
+
+
+
+%\begin{frame}{Monodromy}
+%\metroset{block=fill}
+%\begin{exampleblock}{Problem}
+%Isomonodromic deformations
+%\end{exampleblock}
+%\begin{exampleblock}{Tools}
+%begin{itemize}%
+%	\item Moduli space of connections
+%	\item Deligne-Mumford compactification via stable curves
+%	\item Painlevé V differential equation
+%\end{itemize}
+%end{exampleblock}
+%vfill
+%\begin{exampleblock}{Painlevé Equations (Jimbo, Miwa, Ueno 1981)}
+%Are second order differential equations whose solutions parametrise isomonodromic deformations of rank 2 meromorphic connections with $\deg D = 4$.
+%\end{exampleblock}
+%\end{frame}
+
+
+
+%\begin{frame}{Questions}
+%	\metroset{block=fill}
+%	\begin{exampleblock}{Isomonodromic deformations}
+%		How can we deform the parameters $(t,q,p)$ without changing the monodromy of the connection?\\
+%		What happens when $t=0$ or $t=\infty$?
+%	\end{exampleblock}
+%	\vfill
+%	\begin{exampleblock}{Tools}
+%		\begin{itemize}
+%			\item Moduli space of PV connections,
+%			\item Painlevé V equation,
+%			\item Isomonodromic foliation.
+%		\end{itemize}
+%	\end{exampleblock}
+%\end{frame}
+
+
+
+\section{Moduli Space and Compactification}
+
+
+
+\begin{frame}{Moduli Space}
+	\metroset{block=fill}
+	\begin{exampleblock}{Proposition}
+		$[(\nabla, E, D)]$ "generic" of PV type $\iff \begin{cases} (\P^1, D, J)\;\;,\text{ and}\\p\in \C\end{cases}$
+	\end{exampleblock}
+	\begin{exampleblock}{Moduli space of rational irregular curves $\mathcal M$}
+		\begin{align*}
+			\mathcal M:=\Big\{q\in\P^1\setminus\{0,1,\infty\};\;\;t\in T_{1}\P^1\setminus \{0\}\Big\}.
+		\end{align*}
+	\end{exampleblock}
+	\begin{exampleblock}{Moduli space of PV connections}
+		\[\mathfrak{Con}^V_\Theta\supseteq\mathcal M\times \C\]
+	\end{exampleblock}
+\end{frame}
+
+
+
+\begin{frame}{Moduli Space $\M\subseteq \P^1\times\P^1$}
+	\metroset{block=fill}
+	\begin{center}
+		\includegraphics[width=9cm]{Espmod.jpeg}
+	\end{center}
+	\begin{exampleblock}{Remark}
+		The moduli space $\M$ is a generalization of $\M_{0,5}$ where the fifth marked point is replaced by a tangent vector.
+	\end{exampleblock}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Moduli Space of Conics}
+	\metroset{block=fill}
+	\begin{center}
+		\includegraphics[width=10cm]{image9.jpg}
+	\end{center}
+	\begin{exampleblock}{Moduli Space of Smooth Conics}
+		\[\P^2\setminus\Big(\overline{AB}, \overline{AC}, \overline{BC}, l \Big)\cong \M\]
+	\end{exampleblock}
+\end{frame}
+
+
+
+\begin{frame}{Blow-up of $A$}
+	\metroset{block=fill}
+	\begin{center}
+		\includegraphics[width=7cm]{image10.png}
+	\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Blow-up of $B$, $C$ and $L$}
+	\metroset{block=fill}
+	\begin{center}
+		\includegraphics[width=8cm]{image11.png}
+	\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Compactification $\overline{\mathcal M}$}%
+	\metroset{block=fill}
+	\begin{center}
+		\includegraphics[width=9cm]{image12.png}
+	\end{center}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Compactification $\overline{\mathcal M}$}
+\metroset{block=fill}
+\begin{exampleblock}{Compactification (M., 2025)}
+Following, \textit{mutatis mutandis}, a similar idea that Kapranov used to compactify the spaces $\M_{0,n}$, we get:
+\begin{center}
+	\includegraphics[width=11cm]{image0.jpeg}
+\end{center}
+where $\widetilde\M$ is the weak del Pezzo surface of degree five.
+\end{exampleblock}
+\end{frame}
+
+
+
+\begin{frame}{Universal Curve}
+	\metroset{block=fill}
+	\begin{center}
+		\includegraphics[width=8cm]{image1-5.jpeg}
+	\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Compactification $\overline{\mathfrak{Con}_V^\Theta}$}
+	\metroset{block=fill}
+	\begin{exampleblock}{Line Bundle Extension (M., 2025)}
+		The trivial bundle $\mathcal M\times \C$ extends to
+		\[\O_{\widetilde{\mathcal M}}\Big(A_0+2Q^1+2B_0^1-B_\infty^0-B_\infty^\infty\Big).\]
+		Moreover, it is trivial when restricted to $Q^0$, $Q^\infty$ and $Q^1\cup A_\infty$.
+	\end{exampleblock}
+	\begin{center}
+		\includegraphics[width=5cm]{DISEGNI (16).jpeg}
+	\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Compactification $\overline{\mathfrak{Con}_V^\Theta}$}
+	\begin{center}
+		\includegraphics[width=7cm]{CPXGEOM2.png}
+	\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Compactification $\overline{\mathfrak{Con}_V^\Theta}$}
+	\metroset{block=fill}
+	\begin{exampleblock}{Theorem}
+		The compactified moduli space $\overline{\mathfrak{Con}_V^\Theta}$ comes with a fibration $\pi\colon\overline{\mathfrak{Con}_V^\Theta}\xrightarrow{t}\P^1$ such that:
+		\begin{itemize}
+			\item For any $t\in\C^*$, the fiber $\pi^{-1}(t)$ is an Okamoto space, that is a 8-blow-up of the second Hirzebruch surface $\mathbb F_2$.
+		\end{itemize}
+	\end{exampleblock}
+	\begin{center}
+	\includegraphics[width=5cm]{okam.png}
+	\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Compactification $\overline{\mathfrak{Con}_V^\Theta}$}
+	\metroset{block=fill}
+	\begin{exampleblock}{Theorem (M, 2025)}
+		The compactified moduli space $\overline{\mathfrak{Con}_V^\Theta}$ comes with a fibration $\pi\colon\overline{\mathfrak{Con}_V^\Theta}\xrightarrow{t}\P^1$ such that:
+		\begin{itemize}
+			\item The surface $\pi^{-1}(0)$ is given by $\mathcal A_0\cup\mathcal B_0^1$. Both these components are isomorphic to $\mathbb F_1$.
+			\item Let us denote by $\mathcal F^+_\infty$ and $\mathcal F^-_\infty$ the blow up of the two special sections in $\mathcal A_\infty$. The surface $\pi^{-1}(\infty)$ is given by $\mathcal B_0^\infty\cup\mathcal B_\infty^\infty\cup\mathcal F^+_\infty\cup\mathcal F^-_\infty$. The surfaces $\mathcal B_0^\infty$ and $\mathcal B_\infty^\infty$ are isomorphic to $\mathbb F_1$.
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+
+
+
+
+\section{Painlevé V Foliation}
+
+
+%\begin{frame}{Painlevé V Equation}
+%\metroset{block=fill}
+%\begin{exampleblock}{The Equation (PV)}
+%\begin{align*}
+%    q''(t)=&\Bigg(\frac{1}{2q(t)}+\frac{1}{q(t)-1}\Bigg)q'(t)^2-\frac1tq(t)'\\\\&+\frac{(q(t)-1)^2}{t^2}\Bigg(\alpha q(t)+\frac{\beta}{q(t)}\Bigg)+\gamma \frac {q(t)}{t}+\delta\frac{q(t)(q(t)+1)}{q(t)-1}
+%\end{align*}
+%Where $\alpha, \beta, \gamma, \delta$ are parameters depending on $\Theta$.
+%\end{exampleblock}
+%\end{frame}
+
+
+\begin{frame}{Monodromy of a PV Connection}
+	\metroset{block=fill}
+	\begin{exampleblock}{Wild fundamental groupoid (E. Paul, J-P. Ramis, 2023)}
+		\begin{center}
+			\includegraphics[width = 11cm]{wildfund.png}
+		\end{center}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Monodromy of a PV Connection}
+	\metroset{block=fill}
+	\begin{center}
+		\includegraphics[width = 5cm]{wildfund2.png}
+	\end{center}
+	\begin{exampleblock}{Fact}
+		The monodromy along $\gamma_{1,2}^+\star\gamma_{1,2}^-$ is given by
+		\[M^\gamma=S_0S_1D\]
+		with $S_0$ upper triangular, $S_1$ lower triangular (Stokes matrices) and $D$ diagonal.
+	\end{exampleblock}
+\end{frame}
+
+
+
+
+\begin{frame}{Painlevé V Equation}
+\metroset{block=fill}
+\begin{exampleblock}{The Hamiltonian Function}
+	\[H^V:=\frac{q \left(q -1\right)^{2} p^{2}-\left(\kappa_0 \left(q -1\right)^{2}+\kappa_1  q \left(q -1\right)-t q \right) p +\kappa_\infty \left(q -1\right)}{t}\]
+\end{exampleblock}
+\begin{exampleblock}{The Hamiltonian System}
+\[\begin{cases}
+    \displaystyle\frac{\partial H^V}{\partial p}=\displaystyle\frac{dq}{dt}\\ \\\displaystyle\frac{\partial H^V}{\partial q}=-\displaystyle\frac{dp}{dt}
+\end{cases}\]
+\end{exampleblock}
+\end{frame}
+
+
+
+\begin{frame}{How to Find First Integrals}
+	\metroset{block=fill}
+	\begin{exampleblock}{Deformation of a PV connection}
+		A PV connection splits into a connection over any smooth component. Both connections have a new pole at the node.
+	\end{exampleblock}
+	\begin{center}
+		\includegraphics[width=10cm]{stableconn.png}
+	\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{How to Find First Integrals}
+	\metroset{block=fill}
+	\begin{exampleblock}{Proposition}
+		The residual spectral datum in the node is a first integral for the hamiltonian vector field in restriction to the respective boundary component.
+	\end{exampleblock}
+	\begin{exampleblock}{Idea}
+	Since we are following an isomonodromic leaf, the monodromy along the loop $\gamma$ must be the same as the one of $\gamma_1$ and $\gamma_2$, corresponding to the monodromy of the new poles at the node. In particular the residual spectral datum in the node must be preserved during the deformation.
+	\end{exampleblock}
+\end{frame}
+
+
+
+
+\begin{frame}{Isomonodromic Foliation On the Okamoto Divisor}
+	\metroset{block=fill}
+	\begin{exampleblock}{Proposition}
+		The isomonodromic foliation is stationary along the Okamoto divisor.
+	\end{exampleblock}
+	\begin{center}
+		\includegraphics[width=6cm]{folQ1.png}
+	\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{First Integrals around $t=0$}
+\metroset{block=fill}
+\begin{center}
+    \includegraphics[width=8cm]{FI0.png}
+\end{center}
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}{First Integrals around $t=\infty$}
+\metroset{block=fill}
+\begin{center}
+    \includegraphics[width=10cm]{FIinf.png}
+\end{center}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Thanks :)}
+\begin{center}
+	\Large Thanks for your attention !!
+\end{center}
+\end{frame}
+
+
+
+
+
+\end{document}
